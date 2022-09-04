@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <style>
+    .di {
+      height: 400px;
+      width: 600px;
+    }
+    .big {
+      border: solid 3px black;
+      padding: 15px;
+      width: 611px;
+      background-color: gray;
+    }
+    .img-slider {
+      border: double 6px black;
+
+      width: 600px;
+      position: relative;
+    }
+    .images {
+      display: flex;
+      justify-content: center;
+    }
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+      width: 600px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      top: 40%;
+    }
+    .buttons .btn-1 {
+      padding: 15px 40px;
+      border: none;
+      background-color: gray;
+      opacity: 0.6;
+      border-radius: 15px;
+      text-transform: capitalize;
+      font-size: 20px;
+
+      transition: all 0.5s ease-in;
+    }
+    .buttons .btn-1:hover {
+      opacity: 1;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+
+  <body>
+    <div class="big">
+      <div class="img-slider">
+        <div class="images">
+          <img id="imger" class="di" src="images/res1.jpg" />
+        </div>
+        <div class="buttons">
+          <input
+            type="button"
+            class="btn-1"
+            value="&larr;"
+            onclick="change()"
+          />
+          <input
+            type="button"
+            class="btn-1"
+            value="&rarr;"
+            onclick="change2()"
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    const images = [
+      "images/res1.jpg",
+      "images/res2.jpg",
+      "images/res3.jpg",
+      "images/res4.jpg",
+      "images/res5.jpg",
+      "images/res6.jpg",
+      "images/res7.jpg",
+      "images/res8.jpg",
+    ];
+
+    var ind = 0;
+    let imger = document.getElementById("imger");
+    var x = 0;
+    function change() {
+      imger.src = images[ind];
+      ind++;
+      x = ind;
+      if (ind == 8) ind = 0;
+    }
+    var x = 8;
+    function change2() {
+      imger.src = images[x];
+      x--;
+      if (x == 0) x = 8;
+    }
+  </script>
+</html>

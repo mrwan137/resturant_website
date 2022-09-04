@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="login.css" />
+    <title>Document sadnjsadn</title>
+
+    <script>
+        let userName = 'user';
+        let userPass = 'user';
+
+        let adminName = 'admin';
+        let adminPass = 'admin';
+
+        function login() {
+            let user = document.getElementById('user').value;
+            let pass = document.getElementById('pass').value;
+
+            if (user == userName) {
+                if (pass == userPass) {
+                    window.location.href = 'index.html';
+                } else {
+                    alert('password is incorecct');
+                }
+            } else if (user == adminName) {
+                if (pass == adminPass) {
+                    window.location.href = 'admin.html';
+                } else {
+                    alert('password is incorecct');
+                }
+            } else {
+                alert('no account with this name');
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <nav class="nav-bar">
+                <h1 class="heading-name">Restaurant</h1>
+                <ul class="nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">Pruducts</a></li>
+                    <li><a href="contact2.html">Contact</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="../regsrer.html">Register</a></li>
+                </ul>
+            </nav>
+        </header>
+        <hr />
+    </div>
+    <section class="vid-sec">
+        <div class="div1">
+            <video class="vid" autoplay="" muted="" loop="">
+          <source src="vid4.mp4" type="video/mp4" />
+        </video>
+        </div>
+        <div class="img">
+            <h3> let us see you again </h3>
+        </div>
+    </section>
+
+    <section class="login-section">
+        <div class="login">
+            <div class="form">
+                <h3 class="form-h3">sign in</h3>
+                <label for="" class="label-1">username</label>
+                <input id="user" type="text" placeholder="Username" class="text-input" required />
+                <label for="" class="label-2">password</label>
+                <input id="pass" type="password" placeholder="password" class="text-input" required/>
+                <input type="checkbox" />
+                <label class="rem">remember me</label>
+                <div class="btn-div">
+                    <button onclick="login()" class="login-btn">sgin in</button>
+                </div>
+            </div>
+            <div class="login-images">
+                <img src="images/res1.jpg" alt="" srcset="" class="img1">
+                <img src="images/res9.jpg" alt="" srcset="" class="img2">
+                <img src="images/res3.jpg" alt="" srcset="" class="img3">
+            </div>
+        </div>
+    </section>
+    <FOoter>
+        <div class="footer">
+            <h1> Restaurant</h1>
+            <div class="footer-names">
+                <div>
+                    <hr>
+                    <ul class="names">
+                        <li> omar</li>
+                        <li> marwan</li>
+                        <li> ammar</li>
+                        <li> omar </li>
+                        <li> mohamed</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <hr>
+                    <p>Lorem ipsum, dolor sit<br> amet consectetur adipisicing elit.<br> Eos quidem quam iusto molestiae repellendus quibusdam<br> vel modi, <br>reprehenderit aspernatur obcaecati sit facere <br>perferendis! Nihil illum temporibus nobis,
+                        a saepe aliquam?</p>
+                </div>
+            </div>
+            <p class="copy"> Copyright ©2021 All rights reserved | This template is made with by Out team</p>
+
+    </FOoter>
+</body>
+
+</html>

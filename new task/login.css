@@ -1,0 +1,254 @@
+.container {
+  width: 100%;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+@keyframes text-ani {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.nav {
+  display: flex;
+}
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+  background-color: rgb(247, 243, 243);
+  height: 50px;
+  justify-content: space-around;
+  padding: 10px 10px;
+}
+
+.nav-bar .heading-name {
+  font-size: 40px;
+  margin-right: 380px;
+}
+
+.nav li {
+  margin-right: 20px;
+  list-style-type: none;
+}
+
+.nav li a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  font-weight: 500;
+  background-color: transparent;
+  padding: 5px 15px;
+  border-radius: 15px;
+}
+
+.nav li a:hover {
+  background-color: gray;
+  transition: 2s;
+}
+.vid-sec {
+  position: relative;
+  width: 100%;
+  height: 600px;
+}
+.div1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.5)
+  );
+}
+.div2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+}
+.vid {
+  width: 100%;
+  max-height: 600px;
+  z-index: -1;
+  object-fit: cover;
+  mix-blend-mode: overlay;
+}
+/* .img {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url(/images/res9.jpg);
+  height: 400px;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+} */
+.img h3 {
+  color: white;
+
+  position: absolute;
+  top: 45%;
+  width: 100%;
+  text-align: center;
+  text-transform: capitalize;
+  text-decoration: underline;
+  animation-iteration-count: infinite;
+  animation-name: text-ani;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  font-size: 40px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.login-section {
+  background-color: #f7f7f7;
+}
+.login {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px;
+}
+.login .form {
+  border: solid 1px gray;
+  padding: 30px 30px;
+  width: 350px;
+  height: 400px;
+}
+.login .form .form-h3 {
+  font-size: 30px;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+.login .form .label-1 {
+  display: block;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+.login .form .text-input {
+  width: 90%;
+  padding: 10px 10px;
+  margin-bottom: 20px;
+  border: none;
+  outline: none;
+}
+.login .form .text-input:focus {
+  outline: none;
+  border-bottom: 4px solid #55c57a;
+}
+.login .form .text-input:focus:invalid {
+  border-bottom: solid 4px #ff7730;
+}
+.login .form .label-2 {
+  display: block;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+  margin-top: 10px;
+}
+.login .form .rem {
+  margin-left: 5px;
+  text-transform: capitalize;
+}
+.login .form .btn-div {
+  display: flex;
+  justify-content: center;
+}
+.login .form .login-btn {
+  display: block;
+  margin-top: 50px;
+  padding: 15px 120px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  background-color: black;
+  color: white;
+  border: none;
+}
+.login .form .login-btn:hover {
+  color: black;
+  transition: 0.8s ease-in-out;
+  cursor: pointer;
+  background-color: rgb(133, 129, 129);
+}
+.login .login-images {
+  width: 300px;
+  margin-top: 50px;
+  position: relative;
+  height: 400px;
+}
+.login .login-images img {
+  width: 90%;
+  height: 50%;
+  position: absolute;
+  outline-offset: 20px;
+  transition: all 0.3s ease;
+}
+.login .login-images .img1 {
+  right: 35%;
+  top: 0.5%;
+}
+.login .login-images .img2 {
+  top: 130px;
+  left: 50px;
+  z-index: 10;
+}
+.login .login-images .img3 {
+  top: 35px;
+  left: 50%;
+}
+.login .login-images img:hover {
+  outline: solid 20px gray;
+  transform: scale(1.07);
+  z-index: 20;
+}
+.login-images:hover img:not(:hover) {
+  transform: scale(0.95);
+}
+.footer {
+  height: 300px;
+  background-color: #333333;
+  padding-top: 100px;
+  color: aliceblue;
+}
+footer h1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.footer-names {
+  display: flex;
+  justify-content: space-around;
+}
+.footer-names .names {
+  display: flex;
+}
+.footer-names .names li {
+  margin-top: 20px;
+  margin-right: 25px;
+  list-style-type: none;
+}
+
+.footer-names .names li:hover {
+  transform: rotate(5deg) scale(1.2);
+  box-shadow: 2px 5px 5px black;
+  transition: 0.25s;
+  cursor: pointer;
+  color: gray;
+}
+.copy {
+  margin-top: 60px;
+  text-align: center;
+}
